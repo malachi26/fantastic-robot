@@ -1,0 +1,35 @@
+<html>
+   
+   <head>
+      <title>AngularJS First Application</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src = "js/mainApp.js" ></script>
+		<script src = "js/studentController.js" ></script>
+		
+		<style>
+			table, th , td {
+				border: 1px solid grey;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+			
+			table tr:nth-child(odd) {
+				background-color: #f2f2f2;
+			}
+			
+			table tr:nth-child(even) {
+				background-color: #ffffff;
+			}
+		</style>
+   </head>
+   
+   <body>
+      <h1>AngularJS - Includes</h1>
+      <h2>AngularJS Sample Application</h2>
+      <div ng-app = "mainApp" ng-controller = "studentController">
+         <div ng-include="'include/main.html'"></div>
+		 <div ng-include="'include/subjects.html'"></div>
+         
+      </div>
+   </body>
+</html>

@@ -16,4 +16,12 @@ mainApp.controller("studentController", function($scope) {
          return this.firstName + " " + this.lastName;
       }
    };
+   
+   $scope.reset = function() {
+		$scope.firstName = "Lyle";
+		$scope.lastName = "Hart";
+		$scope.email = "fake@email.com";
+	}
+	
+	$scope.reset();
 });
