@@ -1,0 +1,26 @@
+<html>
+   
+   <head>
+      <title>AngularJS Views</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+
+		
+		<script src = "js/calculatorApp.js" ></script>
+		<script src = "services/calcService.js"></script>
+		<script src = "js/calcController.js" ></script>
+		
+		<style>
+		</style>
+   </head>
+   
+   <body>
+      <h1>AngularJS - Calculator</h1>
+      <div ng-app="calculatorApp" ng-controller="calcController">
+		<label> Enter a number: </label> <input type = "number" ng-model = "number" />
+		<button ng-click="square()">X<sup>2</sup></button>
+		<p> Result: {{result}}</p>
+	  </div>
+      
+   </body>
+</html>
