@@ -1,0 +1,47 @@
+<html>
+   
+   <head>
+      <title>AngularJS Views</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+
+		<script src = "js/studentApp.js" ></script>
+		<script src = "js/mainStudentController.js" ></script>
+		
+		<style>
+			table, th , td {
+				border: 1px solid grey;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+			
+			table tr:nth-child(odd) {
+				background-color: #f2f2f2;
+			}
+			
+			table tr:nth-child(even) {
+				background-color: #ffffff;
+			}
+		</style>
+   </head>
+   
+   <body>
+      <h1>AngularJS - Views</h1>
+      <h2>AngularJS Sample Application</h2>
+      <div ng-app = "studentApp">
+         <p><a href = "#addStudent">Add Student</a></p>
+         <p><a href = "#viewStudents">View Students</a></p>
+         <div ng-view></div>
+         
+         <script type = "text/ng-template" id = "addStudent.html">
+            <h2> Add Student </h2>
+            {{message}}
+         </script>
+         
+         <script type = "text/ng-template" id = "viewStudents.html">
+            <h2> View Students </h2>
+            {{message}}
+         </script>
+      </div>
+   </body>
+</html>
