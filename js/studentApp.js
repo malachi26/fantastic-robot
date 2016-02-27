@@ -3,12 +3,12 @@ studentApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 	
 	when('/addStudent', {
-		templateUrl: 'addStudent.html',
+		templateUrl: 'views/addStudent.html',
 		controller: 'AddStudentController'
 		}).
 	
 	when('/viewStudents', {
-		templateUrl: 'viewStudents.html',
+		templateUrl: 'views/viewStudents.html',
 		controller: 'ViewStudentsController'
 		}).
 	
