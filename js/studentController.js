@@ -6,9 +6,7 @@ mainApp.controller("studentController",
 			firstName: "Mahesh",
 			lastName: "Parashar",
 			fullName: function() {
-				var studentObject;
-				studentObject = $scope.student;
-				return studentObject.firstName + " " + studentObject.lastName;
+				return this.firstName + " " + this.lastName;
 			}
 		}
 	});
