@@ -18,15 +18,26 @@
 			</li>
 		</ol>
 	  </div>
-	  
+
+<!--	  
 	<div ng-app = "" ng-init = "quantity = 1; cost = 30; student = {firstname:'Mahesh',lastname:'Parashar',rollno:101};marks = [80,90,75,73,60]">
         <p>Hello {{student.firstname + " " + student.lastname}}!</p>
 		<p>Expense on Books : {{ cost * quantity }}!</p>
 		<p>Roll No: {{student.rollno}}</p>
 		<p>Marks(Math): {{marks[3]}}</p>
 	</div>
-      
+-->  
+<div ng-app = "mainApp" >
+	<div ng-controller = "studentController">
+		<label> Enter first name:</label> <input type="text" ng-model="student.firstName" />
+		<br/>
+		<label> Enter last name:</label> <input type="text" ng-model="student.lastName" />
+		<br />
+		<br />
+		<label> You are entering:</label> <p> {{student.fullName()}} </p>
+	</div>
+	</div>
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-      
+      <script src = "~/js/studentController.js" />
    </body>
 </html>
