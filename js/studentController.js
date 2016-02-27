@@ -23,5 +23,5 @@ mainApp.controller("studentController", function($scope) {
 		$scope.email = "fake@email.com";
 	}
 	
-	$scope.reset();
-});
+	$scope.reset();	
+};
