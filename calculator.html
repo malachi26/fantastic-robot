@@ -20,6 +20,14 @@
 		<label> Enter a number: </label> <input type = "number" ng-model = "number" />
 		<button ng-click="square()">X<sup>2</sup></button>
 		<p> Result: {{result}}</p>
+	  <br />
+	  <br />
+		<label> Enter a number: </label> <input type="number" ng-model="operand1" />
+		<br />
+		<label> Enter a second number: </label> <input type="number" ng-model="operand2" />
+		<button ng-click="add()">Add</button>
+		<button ng-click="subtract()">Subtract</button>
+		<p> Result: {{ output }} </p>
 	  </div>
       
    </body>
