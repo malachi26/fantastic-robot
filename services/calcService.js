@@ -10,6 +10,9 @@ calculatorApp.factory('MathService', function() {
 	factory.subtract = function(a,b) {
 		return a - b;
 	}
+	factory.divide = function(a, b) {
+		return a / b;
+	}
 	
 	return factory;
 });
@@ -23,6 +26,12 @@ calculatorApp.service('calcService', function(MathService){
 	}
 	this.subtract = function(a, b) {
 		return MathService.subtract(a,b);
+	}
+	this.divide = function (a, b) {
+		return MathService.divide(a, b);
+	}
+	this.multiply = function (a, b) {
+		return MathService.multiply(a, b);
 	}
 });
 
