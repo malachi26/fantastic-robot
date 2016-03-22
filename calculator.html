@@ -1,11 +1,8 @@
 <html>
-   
    <head>
       <title>AngularJS Views</title>
 		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
-
-		
 		<script src = "js/apps/calculatorApp.js" ></script>
 		<script src = "services/calcService.js"></script>
 		<script src = "js/controllers/calcController.js" ></script>
@@ -15,48 +12,44 @@
    </head>
    
    <body ng-app="calculatorApp">
-      <h1>AngularJS - Calculator</h1>
-      <div ng-controller="calcController as calulator">
-		<label> Enter a number: </label> <input type = "number" ng-model = "number" />
-		<button ng-click="squared()">X<sup>2</sup></button>
-		<p> Result: {{result}}</p>
-	  <br />
-	  <br />
-		<label> Enter a number: </label> <input type="number" ng-model="operand1" />
-		<br />
-		<label> Enter a second number: </label> <input type="number" ng-model="operand2" />
-		<br />
-		<button ng-click="add()">Add</button>
-		<button ng-click="subtract()">Subtract</button>
-		<button ng-click="multiply()">Multiply</button>
-		<button ng-click="divide()">Divide</button>
-		<p> Result: {{ output }} </p>
+		<h1>AngularJS - Calculator</h1>
+		<div ng-controller="calcController as calulator">
+			<label> Enter a number: </label> <input type = "number" ng-model = "number" />
+			<button ng-click="squared()">X<sup>2</sup></button>
+			<p> Result: {{result}}</p>
+			<br />
+			<br />
+			<label> Enter a number: </label> <input type="number" ng-model="operand1" />
+			<br />
+			<label> Enter a second number: </label> <input type="number" ng-model="operand2" />
+			<br />
+			<button ng-click="add()">Add</button>
+			<button ng-click="subtract()">Subtract</button>
+			<button ng-click="multiply()">Multiply</button>
+			<button ng-click="divide()">Divide</button>
+			<p> Result: {{ output }} </p>
 	  
-	  <table ng-show="showMultiplicationTable">
-		<tr>
-			<th ng-repeat="item in k">{{item+1}}</th>
-		</tr>
-		<tr ng-repeat="item in k">
-			<td ng-repeat="l in k">
-				{{(l + 1) * (item + 1)}}
-			</td>
-		</tr>
-	  </table>
-	  
-	  <table ng-show="showSquares">
-		<tr>
-			<th>intial</th>
-			<th>square</th>
-		</tr>
-		<tr ng-repeat="i in k">
-			<td>{{ i + 1 }}</td>
-			<td>{{square(i + 1)}}</td>
-		</tr>
-	  </table>
-	  
-	  </div>
-	  
-	  
-      
+			<table ng-show="showMultiplicationTable">
+				<tr>
+					<th ng-repeat="item in k">{{item+1}}</th>
+				</tr>
+				<tr ng-repeat="item in k">
+					<td ng-repeat="l in k">
+						{{(l + 1) * (item + 1)}}
+					</td>
+				</tr>
+			</table>
+		
+			<table ng-show="showSquares">
+				<tr>
+					<th>intial</th>
+					<th>square</th>
+				</tr>
+				<tr ng-repeat="i in k">
+					<td>{{ i + 1 }}</td>
+					<td>{{square(i + 1)}}</td>
+				</tr>
+			</table>
+		</div>  
    </body>
 </html>

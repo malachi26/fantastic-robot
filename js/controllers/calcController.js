@@ -32,12 +32,10 @@
 			return calcService.square(i);
 		}
 		
-		var arrayLength = 100;
-		var k = new Array(100);
-		 for (var i = 0; i < arrayLength; i++) {
+		var arrayLength = 25;
+		var k = new Array(arrayLength);
+		for (var i = 0; i < arrayLength; i++) {
 			k[i] = i;
-		 }		
+		}		
 		$scope.k = k;
-		
-		
 	});
