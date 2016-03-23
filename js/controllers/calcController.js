@@ -1,41 +1,41 @@
 
 	//var calculatorApp = angular.module("calculatorApp", []);
 	calculatorApp.controller('calcController', function($scope, calcService) {
-		$scope.squared = function() {
-			$scope.result = $scope.square($scope.number);
-			$scope.showSquares = true;
-			$scope.showMultiplicationTable = false;
+		this.squared = function() {
+			this.result = this.square(this.number);
+			this.showSquares = true;
+			this.showMultiplicationTable = false;
 		}
-		$scope.add = function() {
-			$scope.output = calcService.add($scope.operand1, $scope.operand2);
-			$scope.showMultiplicationTable = false;
-			$scope.showSquares = false;
+		this.add = function() {
+			this.output = calcService.add(this.operand1, this.operand2);
+			this.showMultiplicationTable = false;
+			this.showSquares = false;
 		}
-		$scope.subtract = function() {
+		this.subtract = function() {
 			this.output = calcService.subtract(this.operand1, this.operand2);
-			$scope.showMultiplicationTable = false;
-			$scope.showSquares = false;
+			this.showMultiplicationTable = false;
+			this.showSquares = false;
 		}
-		$scope.divide = function() {
+		this.divide = function() {
 			this.output = calcService.divide(this.operand1, this.operand2);
-			$scope.showMultiplicationTable = false;
-			$scope.showSquares = false;
+			this.showMultiplicationTable = false;
+			this.showSquares = false;
 		}
 		
-		$scope.multiply = function() {
+		this.multiply = function() {
 			this.output = calcService.multiply(this.operand1, this.operand2);
-			$scope.showMultiplicationTable = true;
-			$scope.showSquares = false;
+			this.showMultiplicationTable = true;
+			this.showSquares = false;
 		}
 		
-		$scope.square = function(i) {
+		this.square = function(i) {
 			return calcService.square(i);
 		}
 		
-		var arrayLength = 25;
-		var k = new Array(arrayLength);
-		for (var i = 0; i < arrayLength; i++) {
-			k[i] = i;
+		this.arrayLength = 25;
+		this.operandArray = new Array(this.arrayLength);
+		for (var i = 0; i < this.arrayLength; i++) {
+			this.operandArray[i] = i;
 		}		
-		$scope.k = k;
+		//k = k;
 	});
